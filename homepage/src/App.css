@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;475;500;550;600&display=swap');  
+
+ html,body {
+  background-color: hsl(var(--bg_hue), var(--bg_saturation), var(--bg_brightness));
+  overflow:hidden;
+  margin: 0;
+  height: 100%;
+}
+
+a#root {
+  display: flex;
+  height: 100%;
+}
+
+h1.txt{
+color: var(--AA-txt-hexadecimal-color);
+text-align: center;
+flex-direction: column;
+margin: 0;
+top:0;
+bottom: 0;
+position:absolute;
+font-size: 3.5em;
+transition: .5s ease;
+border-radius: 48px;
+width: 100%;
+width: -moz-available;          /* WebKit-based browsers will ignore this. */
+width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+width: fill-available;
+height: auto;
+align-content: center;
+justify-content: center;
+display: flex;
+user-select: none;
+pointer-events: none;
+text-decoration: none;
+}
+html,body * { cursor: none;}
+ .dotcursor::after {
+display: none;
+} 
+.i7::after {
+content: "Front-End Development";
+}
+.fade::after {
+opacity: 1;
+}
+.dotcursor.altblend {
+mix-blend-mode: hue;
+}
+h1::after {
+text-align: center;
+display: flex;
+font-size: 0.4em;
+transition: .5s ease-in-out opacity;
+opacity: 0;  /* Initially hidden */
+font-weight: 475;
+font-family: Inter,sans-serif;
+margin: 1.4em auto 0 auto;
+position: initial;
+letter-spacing: -0.005em;
+content:"";
+}
+h1 {
+user-select: none;
+pointer-events: none;
+opacity: 1 !important;
+padding: 0 10% 0 10%;
+letter-spacing: -0.02em;
+-moz-osx-font-smoothing: grayscale;
+text-rendering: optimizeLegibility;
+-webkit-font-smoothing: antialiased;
+font-family: Inter,sans-serif;
+font-weight:550;
+}
+body:active .dotcursor  {
+width: 110px;
+height: 110px;
+left: -55px;
+top:-55px;  
+}
+.dotcursor.show {display: block;
+  }
+a.dotcursor {
+mix-blend-mode: difference;
+user-select: none;
+pointer-events: none;
+height: 80px;
+width: 80px;
+background-color: var(--AA-txt-hexadecimal-color);
+border-radius: 50%;
+position: absolute;
+display:none;
+left: -40px;
+top:-40px;  
+opacity:0;
+z-index: 9;    transition: background-color 0.4s ease-out, width 0.2s ease-in-out, height 0.2s ease-in-out, left 0.2s ease-in-out, top 0.2s ease-in-out; 
+}
+#123canvas {
+z-index: 9999;
+position: absolute;
+mix-blend-mode: difference;
+pointer-events: none;
+}
+.show {
+    display: flex!important;
+    opacity: 1!important;
+}
+.hide {
+  display:none!important;
+}
+#view_project:hover {
+background: var(--colorr);
+transform: scale(1.5);
+}
+  @media screen and (max-width: 475px) {
+    h1{font-size: 11.5vw!important;}
+    body:active .dotcursor  {
+      width: 94px;
+      height: 94px;
+      left: -47px;
+      top:-47px;  
+      }
+  }
+#view_project:hover::after {
+color: var(--colorr2)!important;
+}
+canvas {  mix-blend-mode: exclusion;}
+h1 * { transition: .5s ease-in-out height, .5s ease-in-out opacity; }
+.fade::after { opacity: 1; }
+.i1::after { content: "Interactive Design"; }
+.i2::after { content: "User Interface Design (UI)"; }
+.i3::after { content: "User Experience Design (UX)"; }
+.i4::after { content: "Branding"; }
+.i5::after { content: "Graphic Design"; }
+.i6::after { content: "Motion Graphics"; }
+.i7::after { content: "Front-End Development"; }
+#view_project::after {
+content: "View Projects";
+position: absolute;
+width: fit-content;
+height: fit-content;
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 22px;
+letter-spacing: -0.01em;
+font-feature-settings: 'calt' off;
+font-family: 'Inter', sans-serif;
+margin: 0 auto;
+float: left;
+color: var(--colorr);
+display: var(--displayy);
+left: 30px;
+}
+main { display:none;} 
